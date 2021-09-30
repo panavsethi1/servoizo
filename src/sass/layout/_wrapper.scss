@@ -1,0 +1,14 @@
+.wrapper {
+	height: 100vh;
+	background-color: $color-grey;
+	display: flex;
+
+	&__left {
+		width: 300px;
+	}
+
+	&__right {
+		height: 100vh;
+		width: calc(100vw - 300px);
+	}
+}

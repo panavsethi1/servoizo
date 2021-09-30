@@ -1,0 +1,82 @@
+.left-nav {
+	padding: 3rem 0 2rem;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	&__user {
+		display: flex;
+		align-items: center;
+
+		&__image img {
+			width: 65px;
+			margin-right: 1rem;
+		}
+
+		&__text {
+			&__greeting {
+				color: $color-grey-dark;
+				margin: 0;
+			}
+
+			&__name {
+				color: $color-primary-blue-dark;
+				font-weight: 600;
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	&__earning {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__title {
+			color: $color-grey-dark;
+		}
+
+		&__amount {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: $color-primary-blue-dark;
+		}
+	}
+
+	&__divider {
+		width: 80%;
+		margin: 0 auto;
+		border-bottom: 1px solid $color-grey-dark;
+	}
+
+	&__links {
+		width: 100%;
+		padding-left: 2.5rem;
+		&__item {
+			display: flex;
+			align-items: center;
+			padding: 1rem;
+			cursor: pointer;
+
+			& img {
+				width: 30px;
+				margin-right: 2rem;
+			}
+
+			& p {
+				color: $color-grey-dark;
+			}
+
+			&.active {
+				border-right: 4px solid $color-primary-blue-dark;
+			}
+
+			&.active p {
+				color: $color-primary-blue-dark;
+				font-weight: 500;
+			}
+		}
+	}
+}
