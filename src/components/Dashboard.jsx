@@ -10,19 +10,19 @@ function Dashboard() {
 				<LeftNav activeLink='dashboard' />
 			</div>
 			<div className='wrapper__right'>
-				<div className='dashboard'>
-					<div className='dashboard__logout'>
+				<div className='common'>
+					<div className='common__logout'>
 						<p>Logout</p>
 						<img src={logout} alt='Logout' />
 					</div>
-					<div className='dashboard__header'>
-						<div className='dashboard__header__text'>
+					<div className='common__header'>
+						<div className='common__header__text'>
 							<h2 className='heading-primary'>Dashboard</h2>
 							<p className='heading-primary--sub'>
 								Everything here!
 							</p>
 						</div>
-						<div className='dashboard__header__search'>
+						<div className='common__header__search'>
 							<img src={search} alt='' />
 							<input type='text' placeholder='Search' />
 						</div>

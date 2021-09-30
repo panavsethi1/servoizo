@@ -210,7 +210,7 @@ body {
           text-decoration: none;
           background-color: #097ff5; }
 
-.dashboard {
+.common {
   padding: 3rem;
   height: 100vh;
   background-color: #fff;
@@ -219,37 +219,37 @@ body {
   -moz-border-radius: 50px 0 0 50px;
   -ms-border-radius: 50px 0 0 50px;
   -o-border-radius: 50px 0 0 50px; }
-  .dashboard__logout {
+  .common__logout {
     position: absolute;
     top: 2rem;
     right: 2rem;
     display: flex;
     align-items: center;
     cursor: pointer; }
-    .dashboard__logout img {
+    .common__logout img {
       width: 25px;
       margin-left: 0.5rem; }
-    .dashboard__logout p {
+    .common__logout p {
       color: #7d7d7d; }
-  .dashboard__header {
+  .common__header {
     display: flex;
     align-items: center;
     margin-bottom: 3rem; }
-    .dashboard__header__text {
+    .common__header__text {
       margin-right: 5rem; }
-      .dashboard__header__text h2 {
+      .common__header__text h2 {
         font-size: 1.5rem;
         margin-bottom: 0.25rem; }
-      .dashboard__header__text p {
+      .common__header__text p {
         font-size: 0.8rem;
         color: #7d7d7d; }
-    .dashboard__header__search {
+    .common__header__search {
       padding: 0.5rem;
       border-bottom: 3px solid #f1f2f6; }
-      .dashboard__header__search img {
+      .common__header__search img {
         width: 20px;
         margin-right: 1.5rem; }
-      .dashboard__header__search input {
+      .common__header__search input {
         border: none;
         outline: none;
         width: 400px; }
