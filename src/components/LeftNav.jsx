@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import user from '../assets/img/left-nav/user.png';
 import dashboard from '../assets/img/left-nav/dashboard.svg';
+import dashboardColor from '../assets/img/left-nav/dashboard-color.svg';
+import customerColor from '../assets/img/left-nav/customer-color.svg';
 import customer from '../assets/img/left-nav/customer.svg';
+import devicesColor from '../assets/img/left-nav/devices-color.svg';
 import devices from '../assets/img/left-nav/devices.svg';
+import serviceColor from '../assets/img/left-nav/service-color.svg';
 import service from '../assets/img/left-nav/services.svg';
+import paymentColor from '../assets/img/left-nav/payment-color.svg';
 import payment from '../assets/img/left-nav/payment.svg';
 import logo from '../assets/img/logo.svg';
 
 function LeftNav({ activeLink }) {
 	useEffect(() => {
+		document.querySelectorAll('div').forEach((item) => {
+			item.classList.remove('active');
+		});
 		document.getElementById(activeLink).classList.add('active');
 	}, [activeLink]);
 
@@ -35,25 +43,45 @@ function LeftNav({ activeLink }) {
 			</div>
 			<div className='left-nav__divider'></div>
 			<div className='left-nav__links'>
-				<div id='dashboard' className='left-nav__links__item active'>
-					<img id='dashboard' src={dashboard} alt='' />
-					<p id='dashboard'>Dashboard</p>
+				<div id='dashboard' className='left-nav__links__item'>
+					{activeLink === 'dashboard' ? (
+						<img src={dashboardColor} alt='' />
+					) : (
+						<img src={dashboard} alt='' />
+					)}
+					<p>Dashboard</p>
 				</div>
 				<div id='customer' className='left-nav__links__item'>
-					<img id='customer' src={customer} alt='' />
-					<p id='customer'>Customer</p>
+					{activeLink === 'customer' ? (
+						<img src={customerColor} alt='' />
+					) : (
+						<img src={customer} alt='' />
+					)}
+					<p>Customer</p>
 				</div>
 				<div id='devices' className='left-nav__links__item'>
-					<img id='devices' src={devices} alt='' />
-					<p id='devices'>Devices</p>
+					{activeLink === 'devices' ? (
+						<img src={devicesColor} alt='' />
+					) : (
+						<img src={devices} alt='' />
+					)}
+					<p>Devices</p>
 				</div>
 				<div id='service' className='left-nav__links__item'>
-					<img id='service' src={service} alt='' />
-					<p id='service'>Service</p>
+					{activeLink === 'service' ? (
+						<img src={serviceColor} alt='' />
+					) : (
+						<img src={service} alt='' />
+					)}
+					<p>Service</p>
 				</div>
 				<div id='payment' className='left-nav__links__item'>
-					<img id='payment' src={payment} alt='' />
-					<p id='payment'>Payment</p>
+					{activeLink === 'payment' ? (
+						<img src={paymentColor} alt='' />
+					) : (
+						<img src={payment} alt='' />
+					)}
+					<p>Payment</p>
 				</div>
 			</div>
 			<div className='left-nav__logo'>
