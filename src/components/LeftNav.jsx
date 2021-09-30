@@ -11,6 +11,7 @@ import service from '../assets/img/left-nav/services.svg';
 import paymentColor from '../assets/img/left-nav/payment-color.svg';
 import payment from '../assets/img/left-nav/payment.svg';
 import logo from '../assets/img/logo.svg';
+import { Link } from 'react-router-dom';
 
 function LeftNav({ activeLink }) {
 	useEffect(() => {
@@ -43,46 +44,56 @@ function LeftNav({ activeLink }) {
 			</div>
 			<div className='left-nav__divider'></div>
 			<div className='left-nav__links'>
-				<div id='dashboard' className='left-nav__links__item'>
-					{activeLink === 'dashboard' ? (
-						<img src={dashboardColor} alt='' />
-					) : (
-						<img src={dashboard} alt='' />
-					)}
-					<p>Dashboard</p>
-				</div>
-				<div id='customer' className='left-nav__links__item'>
-					{activeLink === 'customer' ? (
-						<img src={customerColor} alt='' />
-					) : (
-						<img src={customer} alt='' />
-					)}
-					<p>Customer</p>
-				</div>
-				<div id='devices' className='left-nav__links__item'>
-					{activeLink === 'devices' ? (
-						<img src={devicesColor} alt='' />
-					) : (
-						<img src={devices} alt='' />
-					)}
-					<p>Devices</p>
-				</div>
-				<div id='service' className='left-nav__links__item'>
-					{activeLink === 'service' ? (
-						<img src={serviceColor} alt='' />
-					) : (
-						<img src={service} alt='' />
-					)}
-					<p>Service</p>
-				</div>
-				<div id='payment' className='left-nav__links__item'>
-					{activeLink === 'payment' ? (
-						<img src={paymentColor} alt='' />
-					) : (
-						<img src={payment} alt='' />
-					)}
-					<p>Payment</p>
-				</div>
+				<Link to='/dashboard'>
+					<div id='dashboard' className='left-nav__links__item'>
+						{activeLink === 'dashboard' ? (
+							<img src={dashboardColor} alt='' />
+						) : (
+							<img src={dashboard} alt='' />
+						)}
+						<p>Dashboard</p>
+					</div>
+				</Link>
+				<Link to='/customer'>
+					<div id='customer' className='left-nav__links__item'>
+						{activeLink === 'customer' ? (
+							<img src={customerColor} alt='' />
+						) : (
+							<img src={customer} alt='' />
+						)}
+						<p>Customer</p>
+					</div>
+				</Link>
+				<Link to='/devices'>
+					<div id='devices' className='left-nav__links__item'>
+						{activeLink === 'devices' ? (
+							<img src={devicesColor} alt='' />
+						) : (
+							<img src={devices} alt='' />
+						)}
+						<p>Devices</p>
+					</div>
+				</Link>
+				<Link to='/service'>
+					<div id='service' className='left-nav__links__item'>
+						{activeLink === 'service' ? (
+							<img src={serviceColor} alt='' />
+						) : (
+							<img src={service} alt='' />
+						)}
+						<p>Service</p>
+					</div>
+				</Link>
+				<Link to='/payment'>
+					<div id='payment' className='left-nav__links__item'>
+						{activeLink === 'payment' ? (
+							<img src={paymentColor} alt='' />
+						) : (
+							<img src={payment} alt='' />
+						)}
+						<p>Payment</p>
+					</div>
+				</Link>
 			</div>
 			<div className='left-nav__logo'>
 				<img src={logo} alt='' />
