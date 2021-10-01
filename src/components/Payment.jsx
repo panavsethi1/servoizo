@@ -1,7 +1,8 @@
 import React from 'react';
 import LeftNav from './LeftNav';
-import search from '../assets/img/dashboard/search.svg';
-import logout from '../assets/img/dashboard/logout.svg';
+import search from '../assets/img/common/search.svg';
+import logout from '../assets/img/common/logout.svg';
+import RightBar from './RightBar';
 
 function Payment() {
 	return (
@@ -26,6 +27,10 @@ function Payment() {
 							<img src={search} alt='' />
 							<input type='text' placeholder='Search' />
 						</div>
+					</div>
+					<div className='common__content'>
+						<div className='common__content__main'></div>
+						<RightBar />
 					</div>
 				</div>
 			</div>
