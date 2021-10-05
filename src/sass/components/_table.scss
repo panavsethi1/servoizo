@@ -1,0 +1,54 @@
+.data-table {
+	width: 95%;
+
+	@include respond(sm) {
+		width: 700px;
+	}
+
+	& tr {
+		border-bottom: 1px solid $color-grey;
+	}
+
+	& thead {
+		color: $color-grey-dark;
+
+		& th {
+			padding-bottom: 0.75rem;
+			font-weight: 500;
+		}
+	}
+
+	& tbody {
+		font-size: 0.8rem;
+		color: $color-grey-dark;
+
+		& td {
+			padding: 0.75rem 0;
+		}
+	}
+
+	&__devices {
+		display: flex;
+		overflow-x: auto;
+
+		&__item {
+			display: inline;
+			margin-right: 0.4rem;
+			font-size: 0.6rem;
+			padding: 0.2rem 0.4rem;
+			border-radius: 8px;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			-ms-border-radius: 8px;
+			-o-border-radius: 8px;
+
+			&:nth-child(odd) {
+				background-color: #b6ffdb;
+			}
+
+			&:nth-child(even) {
+				background-color: #ffc5bb;
+			}
+		}
+	}
+}

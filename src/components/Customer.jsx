@@ -4,6 +4,9 @@ import search from '../assets/img/common/search.svg';
 import logout from '../assets/img/common/logout.svg';
 import RightBar from './RightBar';
 import hamburger from './../assets/img/common/hamburger-menu.svg';
+import graph from '../assets/img/consumer-graph.png';
+import pie from '../assets/img/dashboard-pie.png';
+import Table from './table/Table';
 
 function Customer() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +59,44 @@ function Customer() {
 						</div>
 					</div>
 					<div className='common__content'>
-						<div className='common__content__main'></div>
+						<div className='common__content__main'>
+							<div className='customer'>
+								<div className='customer__top'>
+									<div className='customer__top__sales'>
+										<div className='customer__top__sales__header'>
+											<div className='customer__top__sales__header__text'>
+												<h1>Summary</h1>
+												<div>
+													<p>Showing for</p>
+													<a href='/'>
+														Aug 15 - Aug 29, 2021 ▼
+													</a>
+												</div>
+											</div>
+										</div>
+										<div className='customer__top__sales__chart'>
+											<img src={graph} alt='' />
+										</div>
+									</div>
+									<div className='customer__top__total'>
+										<div className='customer__top__total__header'>
+											<h1>Total Consumers</h1>
+										</div>
+										<div className='customer__top__total__chart'>
+											<img src={pie} alt='' />
+										</div>
+									</div>
+								</div>
+								<div className='customer__bottom'>
+									<div className='customer__bottom__header'>
+										<h1>New Customers</h1>
+									</div>
+									<div className='customer__bottom__table'>
+										<Table />
+									</div>
+								</div>
+							</div>
+						</div>
 						<RightBar />
 					</div>
 				</div>

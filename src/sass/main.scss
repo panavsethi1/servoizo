@@ -8,8 +8,12 @@
 
 @import 'components/checkbox';
 @import 'components/left-nav';
+@import 'components/table';
+@import 'components/toggle';
 
 @import 'layout/wrapper';
 @import 'layout/common';
 
 @import 'pages/login';
+@import 'pages/dashboard';
+@import 'pages/customer';

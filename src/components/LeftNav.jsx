@@ -10,7 +10,7 @@ import serviceColor from '../assets/img/left-nav/service-color.svg';
 import service from '../assets/img/left-nav/services.svg';
 import paymentColor from '../assets/img/left-nav/payment-color.svg';
 import payment from '../assets/img/left-nav/payment.svg';
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/img/logo.png';
 import { Link } from 'react-router-dom';
 
 function LeftNav({ activeLink }) {

@@ -113,4 +113,10 @@
 	& a {
 		text-decoration: none;
 	}
+
+	&__logo {
+		& img {
+			width: 200px;
+		}
+	}
 }
