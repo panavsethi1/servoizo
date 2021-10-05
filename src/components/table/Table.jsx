@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTable } from 'react-table';
-import Switch from 'react-switch';
 
 function Table() {
 	const data = React.useMemo(
