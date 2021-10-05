@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import user from '../assets/img/left-nav/user.png';
 import dashboard from '../assets/img/left-nav/dashboard.svg';
 import dashboardColor from '../assets/img/left-nav/dashboard-color.svg';
