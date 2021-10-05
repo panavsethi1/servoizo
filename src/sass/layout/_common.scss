@@ -7,6 +7,40 @@
 	-moz-border-radius: 50px 0 0 50px;
 	-ms-border-radius: 50px 0 0 50px;
 	-o-border-radius: 50px 0 0 50px;
+	position: relative;
+
+	@include respond(md) {
+		height: 100%;
+		padding: 3rem;
+		width: 100%;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		-o-border-radius: 0;
+	}
+
+	&__hamburger {
+		position: absolute;
+		top: 2rem;
+		left: 3rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		-webkit-transition: all 0.2s;
+		-moz-transition: all 0.2s;
+		-ms-transition: all 0.2s;
+		-o-transition: all 0.2s;
+		display: none;
+
+		@include respond(lg) {
+			display: initial;
+		}
+
+		& img {
+			cursor: pointer;
+			width: 20px;
+		}
+	}
 
 	&__logout {
 		position: absolute;
@@ -31,6 +65,15 @@
 		align-items: center;
 		margin-bottom: 3rem;
 
+		@include respond(lg) {
+			margin-top: 1.5rem;
+		}
+
+		@include respond(md) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
 		&__text {
 			margin-right: 5rem;
 
@@ -48,6 +91,12 @@
 		&__search {
 			padding: 0.5rem;
 			border-bottom: 3px solid $color-grey;
+			display: flex;
+
+			@include respond(md) {
+				width: 100%;
+				margin-top: 1.5rem;
+			}
 
 			& img {
 				width: 20px;
@@ -65,7 +114,7 @@
 	&__content {
 		display: flex;
 
-		@include respond(lg) {
+		@include respond(md) {
 			flex-direction: column;
 		}
 
@@ -73,7 +122,7 @@
 			flex: 5;
 			border-right: 3px solid $color-grey;
 
-			@include respond(lg) {
+			@include respond(md) {
 				flex: auto;
 				border: none;
 			}
@@ -87,8 +136,9 @@
 			justify-content: space-between;
 			height: calc(100vh - 13rem);
 
-			@include respond(lg) {
+			@include respond(md) {
 				flex: auto;
+				padding: 0;
 			}
 
 			&__header {
@@ -185,7 +235,7 @@
 				}
 
 				& p {
-					margin-top: 1rem;
+					margin: 1rem 0;
 					font-size: 0.8rem;
 					color: $color-grey-dark;
 				}

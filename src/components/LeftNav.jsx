@@ -22,7 +22,7 @@ function LeftNav({ activeLink }) {
 	}, [activeLink]);
 
 	return (
-		<div className='left-nav'>
+		<div id='left-nav-content' className='left-nav'>
 			<div className='left-nav__user'>
 				<div className='left-nav__user__image'>
 					<img src={user} alt='User' />

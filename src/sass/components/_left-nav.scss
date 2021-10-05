@@ -5,10 +5,30 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	background-color: $color-grey;
+	transition: all 0.05s;
+	-webkit-transition: all 0.05s;
+	-moz-transition: all 0.05s;
+	-ms-transition: all 0.05s;
+	-o-transition: all 0.05s;
+	overflow: auto;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	@include respond(lg) {
+		visibility: hidden;
+		padding: 1.5rem 0;
+	}
 
 	&__user {
 		display: flex;
 		align-items: center;
+
+		@include respond(lg) {
+			margin-bottom: 1rem;
+		}
 
 		&__image img {
 			width: 65px;
@@ -34,6 +54,10 @@
 		justify-content: center;
 		align-items: center;
 
+		@include respond(lg) {
+			margin-bottom: 1rem;
+		}
+
 		&__title {
 			color: $color-grey-dark;
 		}
@@ -54,6 +78,12 @@
 	&__links {
 		width: 100%;
 		padding-left: 2.5rem;
+
+		@include respond(lg) {
+			padding-left: 1rem;
+			margin-top: 1rem;
+		}
+
 		&__item {
 			display: flex;
 			align-items: center;
