@@ -202,6 +202,7 @@ body {
       -o-border-radius: 0; } }
   .common__hamburger {
     position: absolute;
+    z-index: 2;
     top: 2rem;
     left: 3rem;
     cursor: pointer;
@@ -210,7 +211,14 @@ body {
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
-    display: none; }
+    display: none;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px; }
     @media only screen and (max-width: 75em) {
       .common__hamburger {
         display: initial; } }
@@ -235,7 +243,7 @@ body {
     margin-bottom: 3rem; }
     @media only screen and (max-width: 75em) {
       .common__header {
-        margin-top: 1.5rem; } }
+        margin-top: 2rem; } }
     @media only screen and (max-width: 62em) {
       .common__header {
         flex-direction: column;
