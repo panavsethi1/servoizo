@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import LeftNav from './LeftNav';
 import search from '../assets/img/common/search.svg';
 import logout from '../assets/img/common/logout.svg';
 import RightBar from './RightBar';
 import hamburger from './../assets/img/common/hamburger-menu.svg';
+import summaryChart from '../assets/img/service-summary-chart.png';
+import summaryAppliances from '../assets/img/summary-appliances.png';
+
+import { Tabs } from 'antd';
+
+const { TabPane } = Tabs;
 
 function Service() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +27,8 @@ function Service() {
 				'hidden';
 		}
 	}
+
+	function handleTabChange() {}
 
 	return (
 		<div className='wrapper'>
@@ -45,7 +53,7 @@ function Service() {
 					</div>
 					<div className='common__header'>
 						<div className='common__header__text'>
-							<h2 className='heading-primary'>Service</h2>
+							<h2 className='heading-primary'>Service Details</h2>
 							<p className='heading-primary--sub'>
 								Everything here!
 							</p>
@@ -56,7 +64,71 @@ function Service() {
 						</div>
 					</div>
 					<div className='common__content'>
-						<div className='common__content__main'></div>
+						<div className='common__content__main'>
+							<div className='service'>
+								<Tabs
+									defaultActiveKey='1'
+									onChange={handleTabChange}>
+									<TabPane tab='Summary' key='1'>
+										<div className='service__top'>
+											<div className='service__top__tabs'>
+												<div className='service__top__tabs__summary'>
+													<div className='service__top__tabs__summary__total'>
+														<h1>Total Booking</h1>
+														<div className='service__top__tabs__summary__total__chart'>
+															<img
+																src={
+																	summaryChart
+																}
+																alt=''
+															/>
+														</div>
+													</div>
+													<div className='service__top__tabs__summary__pending'>
+														<h1>Pending Booking</h1>
+														<div className='service__top__tabs__summary__pending__chart'>
+															<img
+																src={
+																	summaryChart
+																}
+																alt=''
+															/>
+														</div>
+													</div>
+													<div className='service__top__tabs__summary__average'>
+														<h1>Average Booking</h1>
+														<div className='service__top__tabs__summary__average__chart'>
+															<img
+																src={
+																	summaryChart
+																}
+																alt=''
+															/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div className='service__bottom'>
+												<h1>Appliances</h1>
+												<div className='service__bottom__companies'>
+													<img
+														src={summaryAppliances}
+														alt=''
+													/>
+												</div>
+												<a href='/'>See full list ►</a>
+											</div>
+										</div>
+									</TabPane>
+									<TabPane tab='All Bookings' key='2'>
+										Content of Tab Pane 2
+									</TabPane>
+									<TabPane tab='3rd Party Vendor' key='3'>
+										Content of Tab Pane 3
+									</TabPane>
+								</Tabs>
+							</div>
+						</div>
 						<RightBar />
 					</div>
 				</div>
