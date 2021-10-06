@@ -154,11 +154,21 @@ body {
   .left-nav__logo img {
     width: 200px; }
 
+table {
+  width: 100%; }
+  @media only screen and (max-width: 48em) {
+    table {
+      width: 700px; } }
+
 .data-table {
-  width: 95%; }
+  width: 100%; }
   @media only screen and (max-width: 48em) {
     .data-table {
-      width: 700px; } }
+      overflow-x: scroll;
+      width: 100%;
+      margin-bottom: 2rem; }
+      .data-table::-webkit-scrollbar {
+        display: none; } }
   .data-table tr {
     border-bottom: 1px solid #f1f2f6; }
   .data-table thead {
@@ -283,10 +293,12 @@ input:checked + .slider:before {
   -ms-border-radius: 50px 0 0 50px;
   -o-border-radius: 50px 0 0 50px;
   position: relative; }
+  @media only screen and (max-width: 75em) {
+    .common {
+      padding-top: 3rem; } }
   @media only screen and (max-width: 62em) {
     .common {
       height: 100%;
-      padding: 3rem;
       width: 100%;
       border-radius: 0;
       -webkit-border-radius: 0;
@@ -773,3 +785,82 @@ input:checked + .slider:before {
             width: 100%; } }
     .device__bottom a {
       font-size: 0.8rem; }
+
+.payment__tabs {
+  margin-right: 1rem; }
+  .payment__tabs__summary {
+    display: flex; }
+    @media only screen and (max-width: 62em) {
+      .payment__tabs__summary {
+        flex-direction: column; } }
+    .payment__tabs__summary__sales {
+      flex: 1; }
+      @media only screen and (max-width: 62em) {
+        .payment__tabs__summary__sales {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 2rem;
+          margin-top: 1rem; } }
+      .payment__tabs__summary__sales h1 {
+        font-size: 1.2rem; }
+      .payment__tabs__summary__sales__charts {
+        height: calc(100vh - 13rem);
+        overflow-y: scroll;
+        overflow-x: visible; }
+        .payment__tabs__summary__sales__charts::-webkit-scrollbar {
+          display: none; }
+        .payment__tabs__summary__sales__charts__item {
+          width: 200px;
+          height: 200px;
+          padding: 0.5rem;
+          border: 1px solid #f1f2f6;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 12px;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          -ms-border-radius: 12px;
+          -o-border-radius: 12px;
+          margin-bottom: 1rem; }
+          .payment__tabs__summary__sales__charts__item img {
+            height: 90%;
+            width: 90%; }
+    .payment__tabs__summary__country {
+      flex: 2;
+      margin-left: 1rem; }
+      @media only screen and (max-width: 62em) {
+        .payment__tabs__summary__country {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; } }
+      .payment__tabs__summary__country h1 {
+        font-size: 1.2rem; }
+      .payment__tabs__summary__country__charts {
+        height: calc(100vh - 13rem);
+        overflow-y: scroll;
+        overflow-x: visible; }
+        .payment__tabs__summary__country__charts::-webkit-scrollbar {
+          display: none; }
+        .payment__tabs__summary__country__charts__item {
+          height: 200px;
+          width: 100%;
+          min-width: 500px;
+          max-width: 600px;
+          padding: 0.5rem;
+          border: 1px solid #f1f2f6;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 12px;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          -ms-border-radius: 12px;
+          -o-border-radius: 12px;
+          margin-bottom: 1rem; }
+          .payment__tabs__summary__country__charts__item img {
+            height: 90%;
+            width: 90%; }

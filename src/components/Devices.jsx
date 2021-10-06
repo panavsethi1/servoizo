@@ -7,6 +7,7 @@ import hamburger from './../assets/img/common/hamburger-menu.svg';
 import summaryAppliances from '../assets/img/summary-appliances.png';
 import deviceChart from '../assets/img/devices-chart.png';
 import { Tabs } from 'antd';
+import Table from './table/Table';
 
 const { TabPane } = Tabs;
 
@@ -84,11 +85,11 @@ function Devices() {
 											<a href='/'>See full list ►</a>
 										</div>
 									</TabPane>
-									<TabPane tab='All Bookings' key='2'>
-										Content of Tab Pane 2
+									<TabPane tab='All Devices' key='2'>
+										<Table height='long' />
 									</TabPane>
 									<TabPane tab='3rd Party Vendor' key='3'>
-										Content of Tab Pane 3
+										<Table height='long' />
 									</TabPane>
 								</Tabs>
 							</div>

@@ -8,6 +8,7 @@ import summaryChart from '../assets/img/service-summary-chart.png';
 import summaryAppliances from '../assets/img/summary-appliances.png';
 
 import { Tabs } from 'antd';
+import Table from './table/Table';
 
 const { TabPane } = Tabs;
 
@@ -121,10 +122,10 @@ function Service() {
 										</div>
 									</TabPane>
 									<TabPane tab='All Bookings' key='2'>
-										Content of Tab Pane 2
+										<Table height='long' />
 									</TabPane>
 									<TabPane tab='3rd Party Vendor' key='3'>
-										Content of Tab Pane 3
+										<Table height='long' />
 									</TabPane>
 								</Tabs>
 							</div>

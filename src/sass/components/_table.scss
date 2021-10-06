@@ -1,8 +1,21 @@
-.data-table {
-	width: 95%;
+table {
+	width: 100%;
 
 	@include respond(sm) {
 		width: 700px;
+	}
+}
+.data-table {
+	width: 100%;
+
+	@include respond(sm) {
+		overflow-x: scroll;
+		width: 100%;
+		margin-bottom: 2rem;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 
 	& tr {
