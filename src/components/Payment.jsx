@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import LeftNav from './LeftNav';
 import search from '../assets/img/common/search.svg';
 import logout from '../assets/img/common/logout.svg';
